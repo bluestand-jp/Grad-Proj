@@ -1,0 +1,8 @@
+{
+  "label": "チュートリアル - 基本編",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "5 分で Docusaurus の主要な概念を学べます。"
+  }
+}
