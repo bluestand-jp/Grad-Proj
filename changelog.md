@@ -19,4 +19,6 @@
 - `package.json` に `lint` スクリプトを追加し、Docusaurus のリンターをコマンド一つで実行可能にした。
 - ESLint と関連プラグインを導入し、`lint` スクリプトを ESLint 実行に切り替え。
 - `tsconfig.json` の `extends` パスを `@docusaurus/tsconfig/tsconfig.json` に修正し、設定ファイルが解決できない問題を解消。
+- `docs/tutorial-extras copy` ディレクトリを `docs/needed-items` にリネームし、カテゴリー設定を新名称に合わせて更新。
+- ホームヒーロー見出しをサイトタグラインの表示に変更し、サブタイトルを自由入力文言「戦え、進め。そこに道ができる。」に更新。
 
