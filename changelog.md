@@ -15,4 +15,8 @@
 - `docs/tutorial-extras` 配下のガイド（manage-docs-versions, translate-your-site）を日本語化し、設定例を TypeScript 版に合わせて更新。
 - `docs/tutorial-basics/_category_.json` と `docs/tutorial-extras/_category_.json` のラベル・説明を日本語化。
 - `sidebars.ts` に日本語の JSDoc コメントを追加し、サイドバー設定の説明を更新。
+- `sidebars.ts` の重複定義を削除し、`SidebarsConfig` の再宣言エラーを解消。
+- `package.json` に `lint` スクリプトを追加し、Docusaurus のリンターをコマンド一つで実行可能にした。
+- ESLint と関連プラグインを導入し、`lint` スクリプトを ESLint 実行に切り替え。
+- `tsconfig.json` の `extends` パスを `@docusaurus/tsconfig/tsconfig.json` に修正し、設定ファイルが解決できない問題を解消。
 
