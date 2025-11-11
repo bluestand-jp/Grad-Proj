@@ -16,32 +16,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'かんたん導入',
+    title: '誰にでもイベント開催を',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus は最初から導入しやすさを重視して設計されており、
-        すぐにサイトを立ち上げられるよう配慮されています。
+        イベント制作が未経験だったUniversity eSports Kansaiのメンバー。
+        我々が培ったイベント制作の手順を、簡潔なマニュアル形式に。
       </>
     ),
   },
   {
-    title: '本質に集中',
+    title: '簡潔で必要な部分を中心に',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        面倒な作業は Docusaurus に任せて、あなたはドキュメント作成に集中しましょう。
-        まずは <code>docs</code> ディレクトリにコンテンツを置くだけです。
+        必要な部分だけを中心に、冗長な情報は省き、必要な情報だけを伝える。
+        これであなたもオーガナイザーです。
       </>
     ),
   },
   {
-    title: 'React ベース',
+    title: '先人の知恵をオープンに',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        React を活用してレイアウトを拡張・カスタマイズできます。
-        共通のヘッダーやフッターを再利用しつつ柔軟に拡張可能です。
+        これまでeスポーツ業界では標準でなかったナレッジのオープンソース化。
+        業界の発展には必要不可欠なパーツです。
       </>
     ),
   },

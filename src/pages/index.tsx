@@ -39,7 +39,7 @@ function HomepageHeader(): ReactElement {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            チュートリアルを始める（約5分） ⏱️
+            ５分で概要を掴んでみる ⏱️
           </Link>
         </div>
       </div>
@@ -56,8 +56,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} へようこそ`}
-      description="この説明文は <head /> の meta タグに設定されます">
+      title={`Home`}
+      description="This is the creation manual of University eSports Kansai">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

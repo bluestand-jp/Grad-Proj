@@ -15,9 +15,9 @@ import type * as Preset from '@docusaurus/preset-classic';
  * @limitation 制限事項: 現状は英語ロケールのみ対応し、外部サービス連携 URL は暫定値。
  */
 const config: Config = {
-  title: 'University eSports Kansai',
+  title: 'UeSK Creation Manual',
   tagline: 'Drive Your Dreams.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/uesk-blue-icon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -25,15 +25,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://grd-prj.bluestand.jp',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'bluestand', // Usually your GitHub org/user name.
+  projectName: 'uesk-creation-manual', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -41,8 +41,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ja',
+    locales: ['ja'],
   },
 
   presets: [
@@ -71,19 +71,24 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'University eSports Kansai',
       logo: {
         alt: 'サイトロゴ',
-        src: 'img/logo.svg',
+        src: 'img/uesk-black-icon.svg',
+        srcDark: 'img/uesk-white-icon.svg',
       },
       items: [
+        {
+          to: '/about',
+          position: 'left',
+          label: 'About',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'チュートリアル',
+          label: 'Documents',
         },
-        {href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right'},
+        {href: 'https://github.com/bluestand-jp/Grad-Proj', label: 'GitHub', position: 'right'},
       ],
     },
     footer: {
@@ -93,7 +98,11 @@ const config: Config = {
           title: 'ドキュメント',
           items: [
             {
-              label: 'チュートリアル',
+              label: 'About',
+              to: '/docs/about',
+            },
+            {
+              label: 'Documents',
               to: '/docs/intro',
             },
           ],
@@ -101,10 +110,6 @@ const config: Config = {
         {
           title: 'コミュニティ',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: '#',
-            },
             {
               label: 'Discord',
               href: 'https://discord.gg/82fJTu9Nws',
@@ -120,12 +125,12 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: '#',
+              href: 'https://github.com/bluestand-jp/Grad-Proj',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} University eSports Kansai. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} University eSports Kansai - By BlueStand.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 198">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-6 {
+        letter-spacing: .04em;
+      }
+
+      .cls-7 {
+        letter-spacing: .02em;
+      }
+
+      .cls-8 {
+        font-family: HiraKakuProN-W6-83pv-RKSJ-H, 'Hiragino Kaku Gothic ProN';
+        font-size: 27.57px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #231815;
+      }
+
+      .cls-10 {
+        letter-spacing: .02em;
+      }
+
+      .cls-9 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <g>
+        <path class="cls-9" d="M288,132l21.47,12h101.06l21.47-12v-24h-108v-18h86.53l21.47-12V0h-144v132ZM324,36h72v18h-72v-18Z"/>
+        <polygon class="cls-9" points="450 90 558 90 558 108 450 108 450 132 471.47 144 572.53 144 594 132 594 54 486 54 486 36 572.53 36 594 24 594 0 450 0 450 90"/>
+        <polygon class="cls-9" points="234 108 222 108 36 108 36 0 0 0 0 132 21.47 144 270 144 270 0 234 0 234 108"/>
+        <polygon class="cls-9" points="715.28 63.83 768.84 0 721.84 0 696.13 30.65 671.5 60 648 88 648 12 626.53 0 612 0 612 132 633.47 144 648.01 144 690.66 93.18 750.43 198 792 198 715.28 63.83"/>
+      </g>
+      <text class="cls-8" transform="translate(286.33 176.64)"><tspan class="cls-4" x="0" y="0">Un</tspan><tspan class="cls-7" x="40.31" y="0">i</tspan><tspan class="cls-1" x="48.33" y="0">ve</tspan><tspan class="cls-3" x="81.91" y="0">r</tspan><tspan x="94.37" y="0">s</tspan><tspan class="cls-10" x="110.72" y="0">i</tspan><tspan class="cls-6" x="118.75" y="0">t</tspan><tspan x="131.81" y="0" xml:space="preserve">y  </tspan><tspan class="cls-3" x="167.49" y="0">e</tspan><tspan class="cls-5" x="183.95" y="0">S</tspan><tspan x="202.01" y="0">p</tspan><tspan class="cls-4" x="221.53" y="0">o</tspan><tspan class="cls-6" x="239.45" y="0">r</tspan><tspan class="cls-4" x="254.11" y="0">t</tspan><tspan x="265.53" y="0" xml:space="preserve">s  </tspan><tspan class="cls-10" x="300.24" y="0">K</tspan><tspan x="322.29" y="0">A</tspan><tspan class="cls-4" x="344.57" y="0">N</tspan><tspan class="cls-2" x="366.66" y="0">S</tspan><tspan x="385.27" y="0">AI</tspan></text>
+    </g>
+  </g>
+</svg>
