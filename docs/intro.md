@@ -3,10 +3,11 @@ sidebar_position: 1
 ---
 # はじめに
 
-こんにちは！
-ここはUniversity eSports Kansaiの制作マニュアルドキュメントです。
+こんにちは！ここはUniversity eSports Kansaiの制作マニュアルドキュメントです。
 
 この概要で、５分で全体像をとらえてみましょう。
+
+---
 
 ## 注意書き
 

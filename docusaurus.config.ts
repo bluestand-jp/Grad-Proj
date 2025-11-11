@@ -99,7 +99,7 @@ const config: Config = {
           items: [
             {
               label: 'About',
-              to: '/docs/about',
+              to: '/about',
             },
             {
               label: 'Documents',
