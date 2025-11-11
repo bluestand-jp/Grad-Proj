@@ -1,30 +1,163 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * @file カスタムCSSファイル。
+ * @summary サイト全体の配色とスタイルを定義する。
+ * @spec 主要仕様: キーカラー（#F0F0F0: 白、#172AB6: 青、#0F0F0F: 黒）を基調とした配色を適用。
+ * @limitation 制限事項: InfimaフレームワークのCSS変数を上書きして実装。
  */
 
-/* You can override the default Infima variables here. */
+/**
+ * ライトモードの配色設定
+ * キーカラー: #F0F0F0 (白), #172AB6 (青), #0F0F0F (黒)
+ */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* プライマリカラー（青 #172AB6）とそのバリエーション */
+  --ifm-color-primary: #172AB6;
+  --ifm-color-primary-dark: #13208a;
+  --ifm-color-primary-darker: #111e7d;
+  --ifm-color-primary-darkest: #0d1865;
+  --ifm-color-primary-light: #1d35c2;
+  --ifm-color-primary-lighter: #1f3ac9;
+  --ifm-color-primary-lightest: #2d4fd4;
+
+  /* 背景色（白 #F0F0F0） */
+  --ifm-background-color: #F0F0F0;
+  --ifm-background-surface-color: #ffffff;
+
+  /* テキストカラー（黒 #0F0F0F） */
+  --ifm-font-color-base: #0F0F0F;
+  --ifm-heading-color: #0F0F0F;
+  --ifm-color-content: #0F0F0F;
+  --ifm-color-content-secondary: #4a4a4a;
+
+  /* ナビゲーションバー */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-color: #0F0F0F;
+  --ifm-navbar-link-hover-color: #172AB6;
+
+  /* フッター */
+  --ifm-footer-background-color: #0F0F0F;
+  --ifm-footer-color: #F0F0F0;
+  --ifm-footer-link-color: #F0F0F0;
+  --ifm-footer-link-hover-color: #172AB6;
+
+  /* ボーダーと区切り線 */
+  --ifm-color-emphasis-200: #e0e0e0;
+  --ifm-color-emphasis-300: #d0d0d0;
+  --ifm-border-color: #d0d0d0;
+
+  /* コードブロック */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(23, 42, 182, 0.1);
+
+  /* リンク */
+  --ifm-link-color: #172AB6;
+  --ifm-link-hover-color: #13208a;
+
+  /* ボタン */
+  --ifm-button-background-color: #172AB6;
+  --ifm-button-color: #ffffff;
+  --ifm-button-border-color: #172AB6;
+
+  /* ヒーローセクション */
+  --ifm-hero-background-color: #172AB6;
+  --ifm-hero-text-color: #ffffff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ヒーロータイトルのスタイル調整 */
+.hero__title {
+  color: #ffffff !important;
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+}
+
+@media screen and (max-width: 996px) {
+  .hero__title {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* ヒーローセクション内のボタンスタイル */
+/* ライトモード: 青みがかった白背景（常時）→ 青みがかった黒背景（ホバー時） */
+:root .hero .button--secondary {
+  background-color: #E8E8F0 !important;
+  border-color: #E8E8F0 !important;
+  color: #0F0F1F !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:root .hero .button--secondary:hover {
+  background-color: #0F0F1F !important;
+  border-color: #0F0F1F !important;
+  color: #E8E8F0 !important;
+}
+
+/* ダークモード: 青みがかった黒背景（常時）→ 青みがかった白背景（ホバー時） */
+[data-theme='dark'] .hero .button--secondary {
+  background-color: #0F0F1F !important;
+  border-color: #0F0F1F !important;
+  color: #E8E8F0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme='dark'] .hero .button--secondary:hover {
+  background-color: #E8E8F0 !important;
+  border-color: #E8E8F0 !important;
+  color: #0F0F1F !important;
+}
+
+/**
+ * ダークモードの配色設定
+ * ダークモードでもキーカラーを基調とした配色を維持
+ */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* プライマリカラー（青 #172AB6）とそのバリエーション（ダークモード用に少し明るめに） */
+  --ifm-color-primary: #2d4fd4;
+  --ifm-color-primary-dark: #1d35c2;
+  --ifm-color-primary-darker: #172AB6;
+  --ifm-color-primary-darkest: #13208a;
+  --ifm-color-primary-light: #3d5fe6;
+  --ifm-color-primary-lighter: #4567e8;
+  --ifm-color-primary-lightest: #5d7feb;
+
+  /* 背景色（黒 #0F0F0F） */
+  --ifm-background-color: #0F0F0F;
+  --ifm-background-surface-color: #1a1a1a;
+
+  /* テキストカラー（白 #F0F0F0） */
+  --ifm-font-color-base: #F0F0F0;
+  --ifm-heading-color: #F0F0F0;
+  --ifm-color-content: #F0F0F0;
+  --ifm-color-content-secondary: #b0b0b0;
+
+  /* ナビゲーションバー */
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-navbar-link-color: #F0F0F0;
+  --ifm-navbar-link-hover-color: #2d4fd4;
+
+  /* フッター */
+  --ifm-footer-background-color: #0F0F0F;
+  --ifm-footer-color: #F0F0F0;
+  --ifm-footer-link-color: #F0F0F0;
+  --ifm-footer-link-hover-color: #2d4fd4;
+
+  /* ボーダーと区切り線 */
+  --ifm-color-emphasis-200: #2a2a2a;
+  --ifm-color-emphasis-300: #3a3a3a;
+  --ifm-border-color: #3a3a3a;
+
+  /* コードブロック */
+  --docusaurus-highlighted-code-line-bg: rgba(45, 79, 212, 0.2);
+
+  /* リンク */
+  --ifm-link-color: #2d4fd4;
+  --ifm-link-hover-color: #3d5fe6;
+
+  /* ボタン */
+  --ifm-button-background-color: #2d4fd4;
+  --ifm-button-color: #ffffff;
+  --ifm-button-border-color: #2d4fd4;
+
+  /* ヒーローセクション */
+  --ifm-hero-background-color: #172AB6;
+  --ifm-hero-text-color: #F0F0F0;
 }
