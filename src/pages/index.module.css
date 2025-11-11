@@ -3,11 +3,50 @@
  * and scoped locally.
  */
 
+/**
+ * @summary ヒーローセクション全体の背景とレイアウトを定義する。
+ */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: clamp(20rem, 48vh, 34rem);
+  background-image: url('/img/bg-kobe.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/**
+ * @summary 背景画像の上に半透明オーバーレイを重ね、テキストの可読性を確保する。
+ */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(15, 15, 31, 0.6) 0%,
+      rgba(23, 42, 182, 0.65) 45%,
+      rgba(15, 15, 31, 0.8) 100%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/**
+ * @summary 背景に対してテキストコンテンツを前面に表示する。
+ */
+.heroBanner :global(.container) {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +59,75 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/**
+ * @summary タイピング完了までボタンを非表示にし、フェードインへ備えて位置調整する。
+ */
+.buttonsHidden {
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+}
+
+/**
+ * @summary タイピング完了後にボタンをフェード＋スライドインで表示する。
+ */
+.buttonsVisible {
+  animation: buttonsFadeSlideIn 0.6s ease forwards;
+  pointer-events: auto;
+}
+
+@keyframes buttonsFadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * @summary タイピングアニメーション用の共通装飾を定義する。
+ */
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  white-space: pre;
+  min-height: 1em;
+}
+
+/**
+ * @summary タイピング用カーソルの点滅アニメーションを制御する。
+ */
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 0.08em;
+  height: 1.2em;
+  margin-left: 0.16em;
+  background-color: currentColor;
+  animation: typewriterCaretBlink 0.9s steps(1, end) infinite;
+}
+
+/**
+ * @summary タイピング完了時にカーソル表示を停止する。
+ */
+.typewriterComplete::after {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes typewriterCaretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }

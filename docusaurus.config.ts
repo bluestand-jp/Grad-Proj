@@ -73,8 +73,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'サイトロゴ',
-        src: 'img/uesk-black-icon.svg',
-        srcDark: 'img/uesk-white-icon.svg',
+        src: 'img/uesk-black-symbol-H.svg',
+        srcDark: 'img/uesk-white-symbol-H.svg',
       },
       items: [
         {
@@ -126,6 +126,10 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/bluestand-jp/Grad-Proj',
+            },
+            {
+              label: 'Credit',
+              href: '#', 
             },
           ],
         },

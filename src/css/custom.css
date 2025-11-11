@@ -33,6 +33,7 @@
   --ifm-navbar-background-color: #ffffff;
   --ifm-navbar-link-color: #0F0F0F;
   --ifm-navbar-link-hover-color: #172AB6;
+  --ifm-navbar-height: 4.25rem;
 
   /* フッター */
   --ifm-footer-background-color: #0F0F0F;
@@ -133,6 +134,7 @@
   --ifm-navbar-background-color: #1a1a1a;
   --ifm-navbar-link-color: #F0F0F0;
   --ifm-navbar-link-hover-color: #2d4fd4;
+  --ifm-navbar-height: 4.25rem;
 
   /* フッター */
   --ifm-footer-background-color: #0F0F0F;
@@ -160,4 +162,32 @@
   /* ヒーローセクション */
   --ifm-hero-background-color: #172AB6;
   --ifm-hero-text-color: #F0F0F0;
+}
+
+/* ナビゲーションロゴの拡大設定（バー高さは既定のまま維持） */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  display: block;
+  height: 3.5rem;
+  width: auto;
+  max-width: none;
+  margin-top: -0.12rem;
+}
+
+@media screen and (max-width: 996px) {
+  .navbar__logo img {
+    height: 3rem;
+    margin-top: -0.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__logo img {
+    height: 2.5rem;
+    margin-top: -0.08rem;
+  }
 }
