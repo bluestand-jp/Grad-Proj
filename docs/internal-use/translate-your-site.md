@@ -71,7 +71,7 @@ export default {
 
 ナビゲーションバーにロケールドロップダウンが表示されます。
 
-![Locale Dropdown](./img/localeDropdown.png)
+![Locale Dropdown](../tutorial-extras/img/localeDropdown.png)
 
 ## ローカライズ済みサイトをビルドする
 

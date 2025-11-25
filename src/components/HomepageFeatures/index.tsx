@@ -7,6 +7,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import React from 'react';
 
 type FeatureItem = {
   title: string;
@@ -17,7 +18,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: '誰にでもイベント開催を',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/event-design.svg').default,
     description: (
       <>
         イベント制作が未経験だったUniversity eSports Kansaiのメンバー。
@@ -27,7 +28,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '簡潔で必要な部分を中心に',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/simple-data.svg').default,
     description: (
       <>
         必要な部分だけを中心に、冗長な情報は省き、必要な情報だけを伝える。
@@ -37,10 +38,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '先人の知恵をオープンに',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/open-knowledge.svg').default,
     description: (
       <>
-        これまでeスポーツ業界では標準でなかったナレッジのオープンソース化。
+        これまでeスポーツ業界では標準でなかったナレッジの共有。
         業界の発展には必要不可欠なパーツです。
       </>
     ),

@@ -58,3 +58,6 @@
 - README のライセンス章を更新し、Docusaurus 部分を MIT、独自コンテンツを CC BY-ND へ整理。
 - プロジェクト全体のライセンス方針を明文化した `LICENSE.md` を追加。
 
+## 2025-11-25
+- `src/pages/index.tsx` の `HomepageFeatures` 参照で TypeScript が解決できない IDE エラーが出ていたため、モジュールエイリアスに依存しない相対パス `../components/HomepageFeatures` で再インポートし、ビルド時にコンポーネントが確実に解決されるように調整。
+
