@@ -1,0 +1,10 @@
+{
+    "label": "大会当日",
+    "position": 7,
+    "link": {
+        "type": "generated-index",
+        "title": "大会当日",
+        "slug": "on-the-day",
+        "description": "観客・選手・関係者にとって一番大事な、大会当日の運営方法を紹介します。"
+    }
+}
