@@ -1,16 +1,31 @@
 import React, { useState } from 'react';
 import styles from './Slideshow.module.css';
+import clsx from 'clsx';
+
+export type SlideshowImage = string | { src: string; order?: number };
 
 interface SlideshowProps {
-    images: string[];
+    images: SlideshowImage[];
+    sortImages?: boolean;
+    hasGap?: boolean;
 }
 
-export default function Slideshow({ images }: SlideshowProps): React.ReactElement | null {
+export default function Slideshow({ images, sortImages = false, hasGap = true }: SlideshowProps): React.ReactElement | null {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     if (!images || images.length === 0) {
         return null;
     }
+
+    // Sort images if enabled
+    const processedImages = images.map(img =>
+        typeof img === 'string' ? { src: img, order: Infinity } : { src: img.src, order: img.order ?? Infinity }
+    );
+
+    const displayImages = sortImages
+        ? processedImages.sort((a, b) => a.order - b.order)
+        : processedImages;
+
 
     const openModal = (src: string) => {
         setSelectedImage(src);
@@ -23,21 +38,21 @@ export default function Slideshow({ images }: SlideshowProps): React.ReactElemen
     return (
         <>
             <div className={styles.container}>
-                <div className={styles.scrollContainer}>
-                    {images.map((src, index) => (
+                <div className={clsx(styles.scrollContainer, !hasGap && styles.noGap)}>
+                    {displayImages.map((item, index) => (
                         <div
                             key={index}
                             className={styles.slide}
-                            onClick={() => openModal(src)}
+                            onClick={() => openModal(item.src)}
                             role="button"
                             tabIndex={0}
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' || e.key === ' ') {
-                                    openModal(src);
+                                    openModal(item.src);
                                 }
                             }}
                         >
-                            <img src={src} alt={`Slide ${index + 1}`} className={styles.image} />
+                            <img src={item.src} alt={`Slide ${index + 1}`} className={styles.image} />
                         </div>
                     ))}
                 </div>

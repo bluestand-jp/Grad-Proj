@@ -14,6 +14,12 @@
   scrollbar-width: thin;
 }
 
+.noGap {
+  gap: 0;
+  padding: 1rem 0;
+  /* Adjust padding if necessary when no gap */
+}
+
 .scrollContainer::-webkit-scrollbar {
   height: 8px;
 }

@@ -1,0 +1,102 @@
+/* Timeline.module.css */
+.container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 4rem 1rem;
+    background-color: var(--ifm-background-color);
+    /* Dark background similar to Corsair */
+    color: var(--ifm-font-color-base);
+    scrollbar-width: thin;
+    scrollbar-color: #ffe600 var(--ifm-color-emphasis-200);
+    /* Yellow accent */
+}
+
+.container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--ifm-color-emphasis-200);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #ffe600;
+    border-radius: 4px;
+}
+
+.timeline {
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 2rem;
+    min-width: max-content;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+/* Year styling */
+.year {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--ifm-font-color-base);
+    line-height: 1;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* Line decoration */
+.line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffe600, transparent);
+    margin: 1rem 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid var(--ifm-table-border-color);
+    margin-bottom: 0.5rem;
+    background-color: var(--ifm-background-surface-color);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item:hover .image {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffe600;
+    /* Yellow accent */
+    margin: 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--ifm-color-content-secondary);
+    line-height: 1.5;
+    margin: 0;
+}

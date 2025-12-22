@@ -151,12 +151,16 @@ description: 競技に関する準備
 
 import Slideshow from '@site/src/components/Slideshow';
 
-<Slideshow images={[
-  require('./img/2025-11-27_222409.png').default,
-  require('./img/2025-11-27_222341.png').default,
-  require('./img/2025-11-27_222331.png').default,
-  require('./img/2025-11-27_222319.png').default,
-]} />
+<Slideshow 
+  images={[
+    { src: require('./img/2025-11-27_222409.png').default, order: 2 },
+    { src: require('./img/2025-11-27_222341.png').default, order: 1 },
+    { src: require('./img/2025-11-27_222331.png').default, order: 4 },
+    { src: require('./img/2025-11-27_222319.png').default, order: 3 },
+  ]} 
+  sortImages={true}
+  hasGap={false}
+/>
 
 ## まとめ
 
