@@ -29,7 +29,7 @@ export default function About(): ReactNode {
                 year: '2024/07',
                 title: 'University eSports Kansai 始動',
                 description: '前身となるOECU esports project(現OECU eSports)の企画としてスタート',
-                image: require('./../../docs/preparation/img/uesk-headers-0208.png').default
+                //image: require('./../../docs/preparation/img/uesk-headers-0208.png').default
               },
               {
                 year: '2024/09',

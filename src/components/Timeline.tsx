@@ -29,13 +29,11 @@ export default function Timeline({ items }: TimelineProps): React.ReactElement |
                                     <img src={item.image} alt={item.title} className={styles.image} />
                                 </div>
                             )}
+                            <div className={styles.year}>{item.year}</div>
+                            <div className={styles.line} />
                             <h3 className={styles.title}>{item.title}</h3>
                             <p className={styles.description}>{item.description}</p>
                         </div>
-
-                        <div className={styles.line} />
-
-                        <div className={styles.year}>{item.year}</div>
                     </div>
                 ))}
             </div>

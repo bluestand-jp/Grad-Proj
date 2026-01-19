@@ -4,8 +4,8 @@
  * @spec 主要仕様: Docusaurus v4 フラグを有効化し、クラシックプリセットを使用してドキュメントとブログを構成する。
  * @limitation 制限事項: i18n 設定は英語のみで、環境固有の URL や認証連携は未設定。
  */
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 /**
@@ -88,7 +88,7 @@ const config: Config = {
           position: 'left',
           label: 'Documents',
         },
-        {href: 'https://github.com/bluestand-jp/Grad-Proj', label: 'GitHub', position: 'right'},
+        { href: 'https://github.com/bluestand-jp/Grad-Proj', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
@@ -124,12 +124,12 @@ const config: Config = {
           title: 'その他',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/bluestand-jp/Grad-Proj',
+              label: 'Official HP',
+              href: 'https://uesk.bluestand.jp',
             },
             {
               label: 'Credit',
-              href: '#', 
+              to: '/credit',
             },
           ],
         },

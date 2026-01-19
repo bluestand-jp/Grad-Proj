@@ -2,13 +2,13 @@
 .container {
     width: 100%;
     overflow-x: auto;
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
     background-color: var(--ifm-background-color);
     /* Dark background similar to Corsair */
     color: var(--ifm-font-color-base);
     scrollbar-width: thin;
-    scrollbar-color: #ffe600 var(--ifm-color-emphasis-200);
-    /* Yellow accent */
+    scrollbar-color: #3b5bf7 var(--ifm-color-emphasis-200);
+    /* Blue key color */
 }
 
 .container::-webkit-scrollbar {
@@ -20,14 +20,14 @@
 }
 
 .container::-webkit-scrollbar-thumb {
-    background-color: #ffe600;
+    background-color: #3b5bf7;
     border-radius: 4px;
 }
 
 .timeline {
     display: flex;
     gap: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
     min-width: max-content;
 }
 
@@ -42,11 +42,11 @@
 
 /* Year styling */
 .year {
-    font-size: 4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--ifm-font-color-base);
     line-height: 1;
-    margin-top: 1rem;
+    margin: 0;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     letter-spacing: 0.05em;
 }
@@ -55,7 +55,7 @@
 .line {
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #ffe600, transparent);
+    background: linear-gradient(90deg, #3b5bf7, transparent);
     margin: 1rem 0;
 }
 
@@ -89,8 +89,8 @@
 .title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #ffe600;
-    /* Yellow accent */
+    color: #3b5bf7;
+    /* Blue key color */
     margin: 0;
 }
 
