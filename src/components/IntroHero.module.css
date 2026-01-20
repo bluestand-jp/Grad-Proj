@@ -1,0 +1,156 @@
+/**
+ * IntroHeroコンポーネントのスタイル
+ * グラデーション背景とアニメーション装飾を含む
+ */
+
+.hero {
+    position: relative;
+    padding: 3rem 2rem;
+    margin: -1rem -1rem 2rem -1rem;
+    background: linear-gradient(135deg, #172AB6 0%, #2d4fd4 50%, #3d5fe6 100%);
+    border-radius: 0 0 1.5rem 1.5rem;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+}
+
+.title {
+    color: #ffffff !important;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* 装飾用の円形要素 */
+.heroDecoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.circle1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -50px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    bottom: -80px;
+    left: -40px;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 60%;
+    animation: float 7s ease-in-out infinite 1s;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 2rem 1.5rem;
+        min-height: 160px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .circle1 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle2 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle3 {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* ダークモード対応 */
+[data-theme='dark'] .hero {
+    background: linear-gradient(135deg, #0d1865 0%, #172AB6 50%, #2d4fd4 100%);
+}

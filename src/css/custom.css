@@ -191,3 +191,20 @@
     margin-top: -0.08rem;
   }
 }
+
+/* タブレット表示時のサイドバー幅調整（本文を広く表示） */
+@media screen and (min-width: 768px) and (max-width: 996px) {
+  .theme-doc-sidebar-container {
+    --doc-sidebar-width: 200px !important;
+  }
+
+  aside.theme-doc-sidebar-container {
+    width: 200px !important;
+    min-width: 200px !important;
+  }
+
+  /* 目次（右サイドバー）も縮小 */
+  .tableOfContents_bqdL {
+    max-width: 180px;
+  }
+}
