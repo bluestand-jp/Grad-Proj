@@ -9,6 +9,16 @@ UeSK CM は [Docusaurus](https://docusaurus.io/) 3 系をベースにしたド�
 - Tailwind 風のユーティリティクラスを組み合わせたカスタムスタイリング
 - Markdown/MDX による執筆体験と React コンポーネントの共存
 
+### コンテンツ
+- **Welcome**: 新歓・導入ガイド
+- **About**: 団体・プロジェクトの概要
+- **Credit**: 制作・貢献者クレジット
+- **Documents**:
+    - **needed-items**: 必要な機材・物品リスト
+    - **on-the-day**: 当日の運営マニュアル
+    - **preparation**: 事前準備・タスク
+    - **pretest**: 事前テスト・検証手順
+
 ### ディレクション
 - 完全未経験のメンバーが学び取ったものを直接記載
 - 先人の知恵をオープンに、業界の発展のために発信
@@ -74,8 +84,16 @@ GIT_USER=<GitHubユーザー名> npm run deploy
 `yarn` を利用する場合は `npm run` を `yarn` に読み替えてください。コマンドは `gh-pages` ブランチへビルド成果物を push します。
 
 ## 📁 主なディレクトリ
-- `src/pages/` : ランディングページ等のルートページ
-- `docs/` : Markdown/MDX ドキュメント
+- `src/pages/`
+    - `index.tsx`: トップページ
+    - `about.tsx`: About ページ
+    - `credit.tsx`: Credit ページ
+    - `welcome.tsx`: Welcome ページ
+- `docs/` : ドキュメントルート
+    - `needed-items/`: 必要なもの
+    - `on-the-day/`: 当日運営
+    - `preparation/`: 準備・タスク
+    - `pretest/`: 事前テスト
 - `src/components/` : 共有 React コンポーネント
 - `static/` : 画像やフォントなどの静的アセット
 - `docusaurus.config.ts` : グローバル設定
@@ -91,3 +109,8 @@ GIT_USER=<GitHubユーザー名> npm run deploy
 - 上記以外の独自コンポーネント、ドキュメント本文、画像・音声・動画などのクリエイティブアセットは Creative Commons Attribution-NoDerivatives 4.0 International（CC BY-ND 4.0、[https://creativecommons.org/licenses/by-nd/4.0/](https://creativecommons.org/licenses/by-nd/4.0/)）で提供されます。
 - 再配布の際はライセンス表記を維持し、CC BY-ND 範囲内での利用をお願いします。
 - 詳細はLICENCE.mdを参照してください。
+
+## 🎓 卒業制作展（なわてん）について
+本制作物は、大阪電気通信大学 総合情報学部 卒業制作展（なわてん）に出展された卒業制作作品です。
+- 出展年度: 2025年度
+- バージョン: v1.0
